@@ -5,6 +5,7 @@
 
 # Obj folder
 *\obj
+*obj\
 
 # User-specific files
 *.rsuser
