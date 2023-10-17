@@ -11,6 +11,7 @@ namespace DAL
     {
         private string Name {  get; set; }
         private string Description { get; set; }
+        //comment
         public Episode(string name, string description)
         {
             Name = name;
