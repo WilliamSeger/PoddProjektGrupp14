@@ -11,11 +11,12 @@ namespace DAL
     {
         private string Name {  get; set; }
         private string Description { get; set; }
-        //comment
-        public Episode(string name, string description)
+        private string Length { get; set; }
+        public Episode(string name, string description, string length)
         {
             Name = name;
             Description = description;
+            Length = length;
         }
     }
 }
