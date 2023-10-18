@@ -1,4 +1,4 @@
-﻿namespace TestWinForm
+﻿namespace PL
 {
     partial class Form1
     {
@@ -30,20 +30,20 @@
         {
             panel1 = new Panel();
             label11 = new Label();
-            comboBox3 = new ComboBox();
-            button5 = new Button();
-            button4 = new Button();
+            chooseCategoryCb = new ComboBox();
+            removeCategoryBtn = new Button();
+            changeCategoryBtn = new Button();
             label10 = new Label();
-            button2 = new Button();
-            textBox3 = new TextBox();
+            addCategoryBtn = new Button();
+            categoryNameTxt = new TextBox();
             label6 = new Label();
             label5 = new Label();
-            button1 = new Button();
-            comboBox1 = new ComboBox();
+            addFlowBtn = new Button();
+            podCategoryCb = new ComboBox();
             label4 = new Label();
-            textBox2 = new TextBox();
+            podNameTxt = new TextBox();
             label3 = new Label();
-            textBox1 = new TextBox();
+            podUrlTxt = new TextBox();
             label2 = new Label();
             label1 = new Label();
             antalAvsnitt = new ColumnHeader();
@@ -51,15 +51,15 @@
             titel = new ColumnHeader();
             frekvens = new ColumnHeader();
             kategori = new ColumnHeader();
-            listView1 = new ListView();
+            flowOverviewLv = new ListView();
             label7 = new Label();
-            comboBox2 = new ComboBox();
-            button3 = new Button();
-            listView2 = new ListView();
+            filterOnCategoryCb = new ComboBox();
+            resetFilterBtn = new Button();
+            episodesLv = new ListView();
             label8 = new Label();
-            listView3 = new ListView();
+            episodeInfoLv = new ListView();
             label9 = new Label();
-            button6 = new Button();
+            editFlowBtn = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -67,20 +67,20 @@
             // 
             panel1.BackColor = Color.Gray;
             panel1.Controls.Add(label11);
-            panel1.Controls.Add(comboBox3);
-            panel1.Controls.Add(button5);
-            panel1.Controls.Add(button4);
+            panel1.Controls.Add(chooseCategoryCb);
+            panel1.Controls.Add(removeCategoryBtn);
+            panel1.Controls.Add(changeCategoryBtn);
             panel1.Controls.Add(label10);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(textBox3);
+            panel1.Controls.Add(addCategoryBtn);
+            panel1.Controls.Add(categoryNameTxt);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(addFlowBtn);
+            panel1.Controls.Add(podCategoryCb);
             panel1.Controls.Add(label4);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(podNameTxt);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(podUrlTxt);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Left;
@@ -101,37 +101,37 @@
             label11.TabIndex = 22;
             label11.Text = "Kategori";
             // 
-            // comboBox3
+            // chooseCategoryCb
             // 
-            comboBox3.AutoCompleteMode = AutoCompleteMode.Append;
-            comboBox3.AutoCompleteSource = AutoCompleteSource.ListItems;
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "Historia", "Sport", "Skräck" });
-            comboBox3.Location = new Point(14, 574);
-            comboBox3.Margin = new Padding(3, 4, 3, 4);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(129, 28);
-            comboBox3.TabIndex = 21;
+            chooseCategoryCb.AutoCompleteMode = AutoCompleteMode.Append;
+            chooseCategoryCb.AutoCompleteSource = AutoCompleteSource.ListItems;
+            chooseCategoryCb.FormattingEnabled = true;
+            chooseCategoryCb.Items.AddRange(new object[] { "Historia", "Sport", "Skräck" });
+            chooseCategoryCb.Location = new Point(14, 574);
+            chooseCategoryCb.Margin = new Padding(3, 4, 3, 4);
+            chooseCategoryCb.Name = "chooseCategoryCb";
+            chooseCategoryCb.Size = new Size(129, 28);
+            chooseCategoryCb.TabIndex = 21;
             // 
-            // button5
+            // removeCategoryBtn
             // 
-            button5.Location = new Point(170, 630);
-            button5.Margin = new Padding(3, 4, 3, 4);
-            button5.Name = "button5";
-            button5.Size = new Size(97, 31);
-            button5.TabIndex = 20;
-            button5.Text = "Ta bort";
-            button5.UseVisualStyleBackColor = true;
+            removeCategoryBtn.Location = new Point(170, 630);
+            removeCategoryBtn.Margin = new Padding(3, 4, 3, 4);
+            removeCategoryBtn.Name = "removeCategoryBtn";
+            removeCategoryBtn.Size = new Size(97, 31);
+            removeCategoryBtn.TabIndex = 20;
+            removeCategoryBtn.Text = "Ta bort";
+            removeCategoryBtn.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // changeCategoryBtn
             // 
-            button4.Location = new Point(170, 574);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(97, 31);
-            button4.TabIndex = 19;
-            button4.Text = "Ändra";
-            button4.UseVisualStyleBackColor = true;
+            changeCategoryBtn.Location = new Point(170, 574);
+            changeCategoryBtn.Margin = new Padding(3, 4, 3, 4);
+            changeCategoryBtn.Name = "changeCategoryBtn";
+            changeCategoryBtn.Size = new Size(97, 31);
+            changeCategoryBtn.TabIndex = 19;
+            changeCategoryBtn.Text = "Ändra";
+            changeCategoryBtn.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -143,23 +143,24 @@
             label10.TabIndex = 18;
             label10.Text = "Redigera kategorier";
             // 
-            // button2
+            // addCategoryBtn
             // 
-            button2.Location = new Point(170, 401);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(97, 31);
-            button2.TabIndex = 11;
-            button2.Text = "Lägg till";
-            button2.UseVisualStyleBackColor = true;
+            addCategoryBtn.Location = new Point(170, 401);
+            addCategoryBtn.Margin = new Padding(3, 4, 3, 4);
+            addCategoryBtn.Name = "addCategoryBtn";
+            addCategoryBtn.Size = new Size(97, 31);
+            addCategoryBtn.TabIndex = 11;
+            addCategoryBtn.Text = "Lägg till";
+            addCategoryBtn.UseVisualStyleBackColor = true;
+            addCategoryBtn.Click += addCategoryBtn_Click;
             // 
-            // textBox3
+            // categoryNameTxt
             // 
-            textBox3.Location = new Point(14, 403);
-            textBox3.Margin = new Padding(3, 4, 3, 4);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(129, 27);
-            textBox3.TabIndex = 10;
+            categoryNameTxt.Location = new Point(14, 403);
+            categoryNameTxt.Margin = new Padding(3, 4, 3, 4);
+            categoryNameTxt.Name = "categoryNameTxt";
+            categoryNameTxt.Size = new Size(129, 27);
+            categoryNameTxt.TabIndex = 10;
             // 
             // label6
             // 
@@ -181,24 +182,24 @@
             label5.TabIndex = 8;
             label5.Text = "Lägg till kategori";
             // 
-            // button1
+            // addFlowBtn
             // 
-            button1.Location = new Point(170, 228);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(97, 31);
-            button1.TabIndex = 7;
-            button1.Text = "Lägg till";
-            button1.UseVisualStyleBackColor = true;
+            addFlowBtn.Location = new Point(170, 228);
+            addFlowBtn.Margin = new Padding(3, 4, 3, 4);
+            addFlowBtn.Name = "addFlowBtn";
+            addFlowBtn.Size = new Size(97, 31);
+            addFlowBtn.TabIndex = 7;
+            addFlowBtn.Text = "Lägg till";
+            addFlowBtn.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // podCategoryCb
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(14, 228);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(129, 28);
-            comboBox1.TabIndex = 6;
+            podCategoryCb.FormattingEnabled = true;
+            podCategoryCb.Location = new Point(14, 228);
+            podCategoryCb.Margin = new Padding(3, 4, 3, 4);
+            podCategoryCb.Name = "podCategoryCb";
+            podCategoryCb.Size = new Size(129, 28);
+            podCategoryCb.TabIndex = 6;
             // 
             // label4
             // 
@@ -210,13 +211,13 @@
             label4.TabIndex = 5;
             label4.Text = "Kategori";
             // 
-            // textBox2
+            // podNameTxt
             // 
-            textBox2.Location = new Point(170, 141);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(97, 27);
-            textBox2.TabIndex = 4;
+            podNameTxt.Location = new Point(170, 141);
+            podNameTxt.Margin = new Padding(3, 4, 3, 4);
+            podNameTxt.Name = "podNameTxt";
+            podNameTxt.Size = new Size(97, 27);
+            podNameTxt.TabIndex = 4;
             // 
             // label3
             // 
@@ -228,13 +229,13 @@
             label3.TabIndex = 3;
             label3.Text = "Namn (valfritt)";
             // 
-            // textBox1
+            // podUrlTxt
             // 
-            textBox1.Location = new Point(14, 141);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(129, 27);
-            textBox1.TabIndex = 2;
+            podUrlTxt.Location = new Point(14, 141);
+            podUrlTxt.Margin = new Padding(3, 4, 3, 4);
+            podUrlTxt.Name = "podUrlTxt";
+            podUrlTxt.Size = new Size(129, 27);
+            podUrlTxt.TabIndex = 2;
             // 
             // label2
             // 
@@ -282,17 +283,17 @@
             kategori.Text = "Kategori";
             kategori.Width = 100;
             // 
-            // listView1
+            // flowOverviewLv
             // 
-            listView1.Columns.AddRange(new ColumnHeader[] { antalAvsnitt, namn, titel, frekvens, kategori });
-            listView1.Cursor = Cursors.Hand;
-            listView1.Location = new Point(362, 160);
-            listView1.Margin = new Padding(3, 4, 3, 4);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(504, 492);
-            listView1.TabIndex = 1;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
+            flowOverviewLv.Columns.AddRange(new ColumnHeader[] { antalAvsnitt, namn, titel, frekvens, kategori });
+            flowOverviewLv.Cursor = Cursors.Hand;
+            flowOverviewLv.Location = new Point(362, 160);
+            flowOverviewLv.Margin = new Padding(3, 4, 3, 4);
+            flowOverviewLv.Name = "flowOverviewLv";
+            flowOverviewLv.Size = new Size(504, 492);
+            flowOverviewLv.TabIndex = 1;
+            flowOverviewLv.UseCompatibleStateImageBehavior = false;
+            flowOverviewLv.View = View.Details;
             // 
             // label7
             // 
@@ -304,35 +305,35 @@
             label7.TabIndex = 11;
             label7.Text = "Flödesöverblick";
             // 
-            // comboBox2
+            // filterOnCategoryCb
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "1", "2", "3" });
-            comboBox2.Location = new Point(362, 105);
-            comboBox2.Margin = new Padding(3, 4, 3, 4);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(138, 28);
-            comboBox2.TabIndex = 12;
-            comboBox2.Text = "Filtrera...";
+            filterOnCategoryCb.FormattingEnabled = true;
+            filterOnCategoryCb.Items.AddRange(new object[] { "1", "2", "3" });
+            filterOnCategoryCb.Location = new Point(362, 105);
+            filterOnCategoryCb.Margin = new Padding(3, 4, 3, 4);
+            filterOnCategoryCb.Name = "filterOnCategoryCb";
+            filterOnCategoryCb.Size = new Size(138, 28);
+            filterOnCategoryCb.TabIndex = 12;
+            filterOnCategoryCb.Text = "Filtrera...";
             // 
-            // button3
+            // resetFilterBtn
             // 
-            button3.Location = new Point(518, 105);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(97, 31);
-            button3.TabIndex = 13;
-            button3.Text = "Återställ";
-            button3.UseVisualStyleBackColor = true;
+            resetFilterBtn.Location = new Point(518, 105);
+            resetFilterBtn.Margin = new Padding(3, 4, 3, 4);
+            resetFilterBtn.Name = "resetFilterBtn";
+            resetFilterBtn.Size = new Size(97, 31);
+            resetFilterBtn.TabIndex = 13;
+            resetFilterBtn.Text = "Återställ";
+            resetFilterBtn.UseVisualStyleBackColor = true;
             // 
-            // listView2
+            // episodesLv
             // 
-            listView2.Location = new Point(872, 160);
-            listView2.Margin = new Padding(3, 4, 3, 4);
-            listView2.Name = "listView2";
-            listView2.Size = new Size(237, 492);
-            listView2.TabIndex = 14;
-            listView2.UseCompatibleStateImageBehavior = false;
+            episodesLv.Location = new Point(872, 160);
+            episodesLv.Margin = new Padding(3, 4, 3, 4);
+            episodesLv.Name = "episodesLv";
+            episodesLv.Size = new Size(237, 492);
+            episodesLv.TabIndex = 14;
+            episodesLv.UseCompatibleStateImageBehavior = false;
             // 
             // label8
             // 
@@ -344,14 +345,14 @@
             label8.TabIndex = 15;
             label8.Text = "Avsnitt";
             // 
-            // listView3
+            // episodeInfoLv
             // 
-            listView3.Location = new Point(1115, 160);
-            listView3.Margin = new Padding(3, 4, 3, 4);
-            listView3.Name = "listView3";
-            listView3.Size = new Size(237, 184);
-            listView3.TabIndex = 16;
-            listView3.UseCompatibleStateImageBehavior = false;
+            episodeInfoLv.Location = new Point(1115, 160);
+            episodeInfoLv.Margin = new Padding(3, 4, 3, 4);
+            episodeInfoLv.Name = "episodeInfoLv";
+            episodeInfoLv.Size = new Size(237, 184);
+            episodeInfoLv.TabIndex = 16;
+            episodeInfoLv.UseCompatibleStateImageBehavior = false;
             // 
             // label9
             // 
@@ -363,29 +364,29 @@
             label9.TabIndex = 18;
             label9.Text = "Avsnittsbeskrivning";
             // 
-            // button6
+            // editFlowBtn
             // 
-            button6.Location = new Point(362, 670);
-            button6.Name = "button6";
-            button6.Size = new Size(121, 29);
-            button6.TabIndex = 19;
-            button6.Text = "Redigera flöde";
-            button6.UseVisualStyleBackColor = true;
+            editFlowBtn.Location = new Point(362, 670);
+            editFlowBtn.Name = "editFlowBtn";
+            editFlowBtn.Size = new Size(121, 29);
+            editFlowBtn.TabIndex = 19;
+            editFlowBtn.Text = "Redigera flöde";
+            editFlowBtn.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1471, 803);
-            Controls.Add(button6);
+            Controls.Add(editFlowBtn);
             Controls.Add(label9);
-            Controls.Add(listView3);
+            Controls.Add(episodeInfoLv);
             Controls.Add(label8);
-            Controls.Add(listView2);
-            Controls.Add(button3);
-            Controls.Add(comboBox2);
+            Controls.Add(episodesLv);
+            Controls.Add(resetFilterBtn);
+            Controls.Add(filterOnCategoryCb);
             Controls.Add(label7);
-            Controls.Add(listView1);
+            Controls.Add(flowOverviewLv);
             Controls.Add(panel1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
@@ -400,14 +401,14 @@
 
         private Panel panel1;
         private Label label1;
-        private TextBox textBox2;
+        private TextBox podNameTxt;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox podUrlTxt;
         private Label label2;
-        private Button button1;
-        private ComboBox comboBox1;
+        private Button addFlowBtn;
+        private ComboBox podCategoryCb;
         private Label label4;
-        private TextBox textBox3;
+        private TextBox categoryNameTxt;
         private Label label6;
         private Label label5;
         private ColumnHeader antalAvsnitt;
@@ -415,20 +416,20 @@
         private ColumnHeader titel;
         private ColumnHeader frekvens;
         private ColumnHeader kategori;
-        private ListView listView1;
-        private Button button2;
+        private ListView flowOverviewLv;
+        private Button addCategoryBtn;
         private Label label7;
-        private ComboBox comboBox2;
-        private Button button3;
-        private ListView listView2;
+        private ComboBox filterOnCategoryCb;
+        private Button resetFilterBtn;
+        private ListView episodesLv;
         private Label label8;
-        private ListView listView3;
+        private ListView episodeInfoLv;
         private Label label9;
-        private Button button5;
-        private Button button4;
+        private Button removeCategoryBtn;
+        private Button changeCategoryBtn;
         private Label label10;
         private Label label11;
-        private ComboBox comboBox3;
-        private Button button6;
+        private ComboBox chooseCategoryCb;
+        private Button editFlowBtn;
     }
 }
