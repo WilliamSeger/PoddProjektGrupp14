@@ -1,4 +1,4 @@
-namespace PL
+namespace TestWinForm
 {
     public partial class Form1 : Form
     {
