@@ -8,10 +8,12 @@ namespace DAL.Repository
 {
     public interface IRepository<T>
     {
-        List<T> getAll();
+        List<T> GetAll();
+        T GetByName(string name);
         void Insert(T entity);
-        void Update(T entity);
+        void Update(T entity, int index);
         void Delete(T entity);
         void SaveChanges();
+        
     }
 }
