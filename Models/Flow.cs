@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    internal class Flow
+    public class Flow
     {
-        private string Name { get; set; }
+        public string Name { get; set; }
         private string Title { get; set; }
         private Category Category { get; set; }
         private List<Episode> Episodes { get; set; }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    internal class Episode
+    public class Episode
     {
         private string Name {  get; set; }
         private string Description { get; set; }
