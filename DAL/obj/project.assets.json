@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Models.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Models/1.0.0": {
+      "type": "project",
+      "path": "../Models/Models.csproj",
+      "msbuildProject": "../Models/Models.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "Models >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\alexm\\.nuget\\packages\\": {}
@@ -13,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexm\\Source\\Repos\\WilliamSeger\\PodProjektGrupp14\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\Users\\alexm\\Source\\Repos\\WilliamSeger\\PodProjektGrupp14\\DAL\\DAL.csproj",
+      "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\alexm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexm\\Source\\Repos\\WilliamSeger\\PodProjektGrupp14\\DAL\\obj\\",
+      "outputPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alexm\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -33,7 +52,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
