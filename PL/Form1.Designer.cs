@@ -1,4 +1,4 @@
-﻿namespace TestWinForm
+﻿namespace PL
 {
     partial class Form1
     {
@@ -33,11 +33,11 @@
             newCategoryNameTxt = new TextBox();
             categoriesLv = new ListView();
             label11 = new Label();
-            button5 = new Button();
-            editCategoryNameBtn = new Button();
+            removeCategoryBtn = new Button();
+            editCategoryBtn = new Button();
             label10 = new Label();
-            button2 = new Button();
-            textBox3 = new TextBox();
+            addCategoryBtn = new Button();
+            categoryNameTxt = new TextBox();
             label6 = new Label();
             label5 = new Label();
             button1 = new Button();
@@ -71,11 +71,11 @@
             panel1.Controls.Add(newCategoryNameTxt);
             panel1.Controls.Add(categoriesLv);
             panel1.Controls.Add(label11);
-            panel1.Controls.Add(button5);
-            panel1.Controls.Add(editCategoryNameBtn);
+            panel1.Controls.Add(removeCategoryBtn);
+            panel1.Controls.Add(editCategoryBtn);
             panel1.Controls.Add(label10);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(textBox3);
+            panel1.Controls.Add(addCategoryBtn);
+            panel1.Controls.Add(categoryNameTxt);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(button1);
@@ -117,6 +117,7 @@
             categoriesLv.Size = new Size(131, 186);
             categoriesLv.TabIndex = 23;
             categoriesLv.UseCompatibleStateImageBehavior = false;
+            categoriesLv.View = View.List;
             // 
             // label11
             // 
@@ -128,25 +129,27 @@
             label11.TabIndex = 22;
             label11.Text = "Kategori";
             // 
-            // button5
+            // removeCategoryBtn
             // 
-            button5.Location = new Point(170, 733);
-            button5.Margin = new Padding(3, 4, 3, 4);
-            button5.Name = "button5";
-            button5.Size = new Size(97, 31);
-            button5.TabIndex = 20;
-            button5.Text = "Ta bort";
-            button5.UseVisualStyleBackColor = true;
+            removeCategoryBtn.Location = new Point(170, 733);
+            removeCategoryBtn.Margin = new Padding(3, 4, 3, 4);
+            removeCategoryBtn.Name = "removeCategoryBtn";
+            removeCategoryBtn.Size = new Size(97, 31);
+            removeCategoryBtn.TabIndex = 20;
+            removeCategoryBtn.Text = "Ta bort";
+            removeCategoryBtn.UseVisualStyleBackColor = true;
+            removeCategoryBtn.Click += removeCategoryBtn_Click;
             // 
-            // editCategoryNameBtn
+            // editCategoryBtn
             // 
-            editCategoryNameBtn.Location = new Point(170, 621);
-            editCategoryNameBtn.Margin = new Padding(3, 4, 3, 4);
-            editCategoryNameBtn.Name = "editCategoryNameBtn";
-            editCategoryNameBtn.Size = new Size(97, 31);
-            editCategoryNameBtn.TabIndex = 19;
-            editCategoryNameBtn.Text = "Ändra";
-            editCategoryNameBtn.UseVisualStyleBackColor = true;
+            editCategoryBtn.Location = new Point(170, 621);
+            editCategoryBtn.Margin = new Padding(3, 4, 3, 4);
+            editCategoryBtn.Name = "editCategoryBtn";
+            editCategoryBtn.Size = new Size(97, 31);
+            editCategoryBtn.TabIndex = 19;
+            editCategoryBtn.Text = "Ändra";
+            editCategoryBtn.UseVisualStyleBackColor = true;
+            editCategoryBtn.Click += editCategoryBtn_Click_1;
             // 
             // label10
             // 
@@ -158,23 +161,24 @@
             label10.TabIndex = 18;
             label10.Text = "Redigera kategorier";
             // 
-            // button2
+            // addCategoryBtn
             // 
-            button2.Location = new Point(170, 401);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(97, 31);
-            button2.TabIndex = 11;
-            button2.Text = "Lägg till";
-            button2.UseVisualStyleBackColor = true;
+            addCategoryBtn.Location = new Point(170, 401);
+            addCategoryBtn.Margin = new Padding(3, 4, 3, 4);
+            addCategoryBtn.Name = "addCategoryBtn";
+            addCategoryBtn.Size = new Size(97, 31);
+            addCategoryBtn.TabIndex = 11;
+            addCategoryBtn.Text = "Lägg till";
+            addCategoryBtn.UseVisualStyleBackColor = true;
+            addCategoryBtn.Click += addCategoryBtn_Click_1;
             // 
-            // textBox3
+            // categoryNameTxt
             // 
-            textBox3.Location = new Point(14, 403);
-            textBox3.Margin = new Padding(3, 4, 3, 4);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(129, 27);
-            textBox3.TabIndex = 10;
+            categoryNameTxt.Location = new Point(14, 403);
+            categoryNameTxt.Margin = new Padding(3, 4, 3, 4);
+            categoryNameTxt.Name = "categoryNameTxt";
+            categoryNameTxt.Size = new Size(129, 27);
+            categoryNameTxt.TabIndex = 10;
             // 
             // label6
             // 
@@ -317,7 +321,6 @@
             // filterOnCategoryCb
             // 
             filterOnCategoryCb.FormattingEnabled = true;
-            filterOnCategoryCb.Items.AddRange(new object[] { "1", "2", "3" });
             filterOnCategoryCb.Location = new Point(362, 105);
             filterOnCategoryCb.Margin = new Padding(3, 4, 3, 4);
             filterOnCategoryCb.Name = "filterOnCategoryCb";
@@ -417,7 +420,7 @@
         private Button button1;
         private ComboBox podcastCategoryCb;
         private Label label4;
-        private TextBox textBox3;
+        private TextBox categoryNameTxt;
         private Label label6;
         private Label label5;
         private ColumnHeader antalAvsnitt;
@@ -425,7 +428,7 @@
         private ColumnHeader titel;
         private ColumnHeader kategori;
         private ListView listView1;
-        private Button button2;
+        private Button addCategoryBtn;
         private Label label7;
         private ComboBox filterOnCategoryCb;
         private Button button3;
@@ -433,8 +436,8 @@
         private Label label8;
         private ListView listView3;
         private Label label9;
-        private Button button5;
-        private Button editCategoryNameBtn;
+        private Button removeCategoryBtn;
+        private Button editCategoryBtn;
         private Label label10;
         private Label label11;
         private Button button6;
