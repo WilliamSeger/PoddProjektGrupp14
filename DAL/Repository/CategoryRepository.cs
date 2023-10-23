@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,9 +26,9 @@ namespace DAL.Repository
             SaveChanges();
         }
 
-        public void Delete(Category category)
+        public void Delete(int index)
         {
-            listOfCategories.RemoveAt(listOfCategories.IndexOf(category));
+            listOfCategories.RemoveAt(index);
             SaveChanges();
         }
 

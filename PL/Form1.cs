@@ -86,14 +86,14 @@ namespace PL
 
         private void removeCategoryBtn_Click(object sender, EventArgs e)
         {
-            //    int categoryIndex = categoriesLv.SelectedIndices[0];
-            //    categoryController.DeleteCategory(categoryIndex);
+            int categoryIndex = categoriesLv.SelectedIndices[0];
+            categoryController.DeleteCategory(categoryIndex);
 
-            //    //Uppdaterar combobox och listview
-            //    categoriesLv.Clear();
-            //    populateCategoriesLv();
-            //    ClearAllCombobox();
-            //    populateAllCombobox();
+            //Uppdaterar combobox och listview
+            categoriesLv.Clear();
+            populateCategoriesLv();
+            ClearAllCombobox();
+            populateAllCombobox();
         }
     }
 }

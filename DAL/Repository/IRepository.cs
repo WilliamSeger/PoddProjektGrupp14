@@ -12,7 +12,7 @@ namespace DAL.Repository
         T GetByName(string name);
         void Insert(T entity);
         void Update(T entity, int index);
-        void Delete(T entity);
+        void Delete(int index);
         void SaveChanges();
         
     }
