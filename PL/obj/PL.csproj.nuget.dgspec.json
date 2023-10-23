@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\PL\\PL.csproj": {}
+    "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\PL\\PL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\BLL\\BLL.csproj": {
+    "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\BLL\\BLL.csproj",
+        "projectUniqueName": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\BLL\\BLL.csproj",
-        "packagesPath": "C:\\Users\\alexm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\BLL\\obj\\",
+        "projectPath": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\BLL\\BLL.csproj",
+        "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\BLL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\alexm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\willi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +32,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\DAL\\DAL.csproj"
+              "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\DAL\\DAL.csproj"
               },
-              "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj"
+              "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj"
               }
             }
           }
@@ -66,17 +70,21 @@
         }
       }
     },
-    "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\DAL\\DAL.csproj": {
+    "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\alexm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\DAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\alexm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\willi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -90,8 +98,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj"
+              "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj"
               }
             }
           }
@@ -125,17 +133,21 @@
         }
       }
     },
-    "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj": {
+    "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj",
-        "packagesPath": "C:\\Users\\alexm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\obj\\",
+        "projectPath": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\alexm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\willi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -180,17 +192,21 @@
         }
       }
     },
-    "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\PL\\PL.csproj": {
+    "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\PL\\PL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\PL\\PL.csproj",
+        "projectUniqueName": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\PL\\PL.csproj",
         "projectName": "PL",
-        "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\PL\\PL.csproj",
-        "packagesPath": "C:\\Users\\alexm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\PL\\obj\\",
+        "projectPath": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\PL\\PL.csproj",
+        "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\PL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\alexm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\willi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -204,11 +220,11 @@
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\BLL\\BLL.csproj": {
-                "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\BLL\\BLL.csproj"
+              "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\BLL\\BLL.csproj": {
+                "projectPath": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\BLL\\BLL.csproj"
               },
-              "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj"
+              "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj"
               }
             }
           }

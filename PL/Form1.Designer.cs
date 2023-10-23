@@ -30,9 +30,8 @@
         {
             panel1 = new Panel();
             label11 = new Label();
-            comboBox3 = new ComboBox();
             button5 = new Button();
-            button4 = new Button();
+            editCategoryNameBtn = new Button();
             label10 = new Label();
             button2 = new Button();
             textBox3 = new TextBox();
@@ -49,7 +48,6 @@
             antalAvsnitt = new ColumnHeader();
             namn = new ColumnHeader();
             titel = new ColumnHeader();
-            frekvens = new ColumnHeader();
             kategori = new ColumnHeader();
             listView1 = new ListView();
             label7 = new Label();
@@ -60,16 +58,21 @@
             listView3 = new ListView();
             label9 = new Label();
             button6 = new Button();
+            categoriesLv = new ListView();
+            newCategoryNameTxt = new TextBox();
+            newNameLbl = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.Gray;
+            panel1.Controls.Add(newNameLbl);
+            panel1.Controls.Add(newCategoryNameTxt);
+            panel1.Controls.Add(categoriesLv);
             panel1.Controls.Add(label11);
-            panel1.Controls.Add(comboBox3);
             panel1.Controls.Add(button5);
-            panel1.Controls.Add(button4);
+            panel1.Controls.Add(editCategoryNameBtn);
             panel1.Controls.Add(label10);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(textBox3);
@@ -101,21 +104,9 @@
             label11.TabIndex = 22;
             label11.Text = "Kategori";
             // 
-            // comboBox3
-            // 
-            comboBox3.AutoCompleteMode = AutoCompleteMode.Append;
-            comboBox3.AutoCompleteSource = AutoCompleteSource.ListItems;
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "Historia", "Sport", "Skräck" });
-            comboBox3.Location = new Point(14, 574);
-            comboBox3.Margin = new Padding(3, 4, 3, 4);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(129, 28);
-            comboBox3.TabIndex = 21;
-            // 
             // button5
             // 
-            button5.Location = new Point(170, 630);
+            button5.Location = new Point(170, 733);
             button5.Margin = new Padding(3, 4, 3, 4);
             button5.Name = "button5";
             button5.Size = new Size(97, 31);
@@ -123,15 +114,15 @@
             button5.Text = "Ta bort";
             button5.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // editCategoryNameBtn
             // 
-            button4.Location = new Point(170, 574);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(97, 31);
-            button4.TabIndex = 19;
-            button4.Text = "Ändra";
-            button4.UseVisualStyleBackColor = true;
+            editCategoryNameBtn.Location = new Point(170, 621);
+            editCategoryNameBtn.Margin = new Padding(3, 4, 3, 4);
+            editCategoryNameBtn.Name = "editCategoryNameBtn";
+            editCategoryNameBtn.Size = new Size(97, 31);
+            editCategoryNameBtn.TabIndex = 19;
+            editCategoryNameBtn.Text = "Ändra";
+            editCategoryNameBtn.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -272,11 +263,6 @@
             titel.Text = "Titel";
             titel.Width = 100;
             // 
-            // frekvens
-            // 
-            frekvens.Text = "Frekvens(opt)";
-            frekvens.Width = 100;
-            // 
             // kategori
             // 
             kategori.Text = "Kategori";
@@ -284,12 +270,12 @@
             // 
             // listView1
             // 
-            listView1.Columns.AddRange(new ColumnHeader[] { antalAvsnitt, namn, titel, frekvens, kategori });
+            listView1.Columns.AddRange(new ColumnHeader[] { antalAvsnitt, namn, titel, kategori });
             listView1.Cursor = Cursors.Hand;
             listView1.Location = new Point(362, 160);
             listView1.Margin = new Padding(3, 4, 3, 4);
             listView1.Name = "listView1";
-            listView1.Size = new Size(504, 492);
+            listView1.Size = new Size(403, 492);
             listView1.TabIndex = 1;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
@@ -327,7 +313,7 @@
             // 
             // listView2
             // 
-            listView2.Location = new Point(872, 160);
+            listView2.Location = new Point(771, 160);
             listView2.Margin = new Padding(3, 4, 3, 4);
             listView2.Name = "listView2";
             listView2.Size = new Size(237, 492);
@@ -338,7 +324,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(872, 107);
+            label8.Location = new Point(771, 107);
             label8.Name = "label8";
             label8.Size = new Size(94, 32);
             label8.TabIndex = 15;
@@ -346,10 +332,10 @@
             // 
             // listView3
             // 
-            listView3.Location = new Point(1115, 160);
+            listView3.Location = new Point(1014, 160);
             listView3.Margin = new Padding(3, 4, 3, 4);
             listView3.Name = "listView3";
-            listView3.Size = new Size(237, 184);
+            listView3.Size = new Size(237, 227);
             listView3.TabIndex = 16;
             listView3.UseCompatibleStateImageBehavior = false;
             // 
@@ -357,7 +343,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(1115, 107);
+            label9.Location = new Point(1014, 107);
             label9.Name = "label9";
             label9.Size = new Size(239, 32);
             label9.TabIndex = 18;
@@ -371,6 +357,30 @@
             button6.TabIndex = 19;
             button6.Text = "Redigera flöde";
             button6.UseVisualStyleBackColor = true;
+            // 
+            // categoriesLv
+            // 
+            categoriesLv.Location = new Point(12, 578);
+            categoriesLv.Name = "categoriesLv";
+            categoriesLv.Size = new Size(131, 186);
+            categoriesLv.TabIndex = 23;
+            categoriesLv.UseCompatibleStateImageBehavior = false;
+            // 
+            // newCategoryNameTxt
+            // 
+            newCategoryNameTxt.Location = new Point(171, 578);
+            newCategoryNameTxt.Name = "newCategoryNameTxt";
+            newCategoryNameTxt.Size = new Size(96, 27);
+            newCategoryNameTxt.TabIndex = 24;
+            // 
+            // newNameLbl
+            // 
+            newNameLbl.AutoSize = true;
+            newNameLbl.Location = new Point(171, 550);
+            newNameLbl.Name = "newNameLbl";
+            newNameLbl.Size = new Size(78, 20);
+            newNameLbl.TabIndex = 25;
+            newNameLbl.Text = "Nytt namn";
             // 
             // Form1
             // 
@@ -413,7 +423,6 @@
         private ColumnHeader antalAvsnitt;
         private ColumnHeader namn;
         private ColumnHeader titel;
-        private ColumnHeader frekvens;
         private ColumnHeader kategori;
         private ListView listView1;
         private Button button2;
@@ -425,10 +434,12 @@
         private ListView listView3;
         private Label label9;
         private Button button5;
-        private Button button4;
+        private Button editCategoryNameBtn;
         private Label label10;
         private Label label11;
-        private ComboBox comboBox3;
         private Button button6;
+        private Label newNameLbl;
+        private TextBox newCategoryNameTxt;
+        private ListView categoriesLv;
     }
 }
