@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Controllers
 {
-    internal class CategoryController
+    public class CategoryController
     {
         IRepository<Category> categoryRepository;
 
@@ -28,9 +28,9 @@ namespace BLL.Controllers
             return categoryRepository.GetAll();
         }
 
-        public void DeleteCategory(Category category)
+        public void DeleteCategory(int index)
         {
-            categoryRepository.Delete(category);
+            categoryRepository.Delete(index);
         }
 
         public void UpdateCategoryName(int index, string newName)

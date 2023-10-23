@@ -15,7 +15,7 @@ namespace DAL.Repository
         public FlowRepository() 
         { 
             FlowList = new List<Flow>();
-            FlowSerializer = new Serializer<Flow>(nameof(FlowList) + ".xml");
+            FlowSerializer = new Serializer<Flow>();
         }
         
         public List<Flow> GetAll()
@@ -51,9 +51,9 @@ namespace DAL.Repository
             SaveChanges();
         }
         
-        public void Delete(Flow flow)
+        public void Delete(int index)
         {
-            FlowList.RemoveAt(FlowList.IndexOf(flow));
+            FlowList.RemoveAt(index);
             SaveChanges();
         }
 
