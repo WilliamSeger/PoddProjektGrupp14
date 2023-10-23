@@ -14,36 +14,38 @@ namespace DAL
         private string FileName;
         string directoryPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
         string filePath;
-        public Serializer(string fileName) 
+        public void Serialize(List<T> list)
         {
-            FileName = fileName;
-            filePath = directoryPath + "\\" + fileName;
-
-        }
-
-        public void Serialize(List<T> dataList)
-        {
-            try { 
+            try
+            {
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<T>));
-                using (FileStream xmlStream = new FileStream(filePath, FileMode.Create, FileAccess.Write)) 
+
+                using (FileStream outFile = new FileStream((typeof(T).Name) + ".xml", FileMode.Create, FileAccess.Write))
                 {
-                    xmlSerializer.Serialize(xmlStream, dataList);
+                    xmlSerializer.Serialize(outFile, list);
                 }
             }
-            catch(DirectoryNotFoundException e) {
-            //    (directoryPath + "not found.", "Directory not found");
-            }
-            catch(FileNotFoundException e)
+            catch (FileNotFoundException ex)
             {
-             //  MessageBox.Show (filePath + " not found.", "File not found");
+                Console.WriteLine(ex.Message);
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
+
         public List<T> Deserialize()
         {
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<T>));
-            using (FileStream xmlStream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+
+            using (FileStream inFile = new FileStream((typeof(T).Name + ".xml"), FileMode.Open, FileAccess.Read))
             {
-               return (List<T>)xmlSerializer.Deserialize(xmlStream);
+                return (List<T>)xmlSerializer.Deserialize(inFile);
             }
         }
     }
