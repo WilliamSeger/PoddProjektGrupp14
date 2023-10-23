@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Controllers
 {
-    internal class CategoryController
+    public class CategoryController
     {
         IRepository<Category> categoryRepository;
 

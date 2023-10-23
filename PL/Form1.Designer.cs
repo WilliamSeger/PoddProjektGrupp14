@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            newNameLbl = new Label();
+            newCategoryNameTxt = new TextBox();
+            categoriesLv = new ListView();
             label11 = new Label();
             button5 = new Button();
             editCategoryNameBtn = new Button();
@@ -38,7 +41,7 @@
             label6 = new Label();
             label5 = new Label();
             button1 = new Button();
-            comboBox1 = new ComboBox();
+            podcastCategoryCb = new ComboBox();
             label4 = new Label();
             textBox2 = new TextBox();
             label3 = new Label();
@@ -51,16 +54,13 @@
             kategori = new ColumnHeader();
             listView1 = new ListView();
             label7 = new Label();
-            comboBox2 = new ComboBox();
+            filterOnCategoryCb = new ComboBox();
             button3 = new Button();
             listView2 = new ListView();
             label8 = new Label();
             listView3 = new ListView();
             label9 = new Label();
             button6 = new Button();
-            categoriesLv = new ListView();
-            newCategoryNameTxt = new TextBox();
-            newNameLbl = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -79,7 +79,7 @@
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(button1);
-            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(podcastCategoryCb);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(textBox2);
             panel1.Controls.Add(label3);
@@ -93,6 +93,30 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(296, 803);
             panel1.TabIndex = 0;
+            // 
+            // newNameLbl
+            // 
+            newNameLbl.AutoSize = true;
+            newNameLbl.Location = new Point(171, 550);
+            newNameLbl.Name = "newNameLbl";
+            newNameLbl.Size = new Size(78, 20);
+            newNameLbl.TabIndex = 25;
+            newNameLbl.Text = "Nytt namn";
+            // 
+            // newCategoryNameTxt
+            // 
+            newCategoryNameTxt.Location = new Point(171, 578);
+            newCategoryNameTxt.Name = "newCategoryNameTxt";
+            newCategoryNameTxt.Size = new Size(96, 27);
+            newCategoryNameTxt.TabIndex = 24;
+            // 
+            // categoriesLv
+            // 
+            categoriesLv.Location = new Point(12, 578);
+            categoriesLv.Name = "categoriesLv";
+            categoriesLv.Size = new Size(131, 186);
+            categoriesLv.TabIndex = 23;
+            categoriesLv.UseCompatibleStateImageBehavior = false;
             // 
             // label11
             // 
@@ -182,14 +206,14 @@
             button1.Text = "Lägg till";
             button1.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // podcastCategoryCb
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(14, 228);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(129, 28);
-            comboBox1.TabIndex = 6;
+            podcastCategoryCb.FormattingEnabled = true;
+            podcastCategoryCb.Location = new Point(14, 228);
+            podcastCategoryCb.Margin = new Padding(3, 4, 3, 4);
+            podcastCategoryCb.Name = "podcastCategoryCb";
+            podcastCategoryCb.Size = new Size(129, 28);
+            podcastCategoryCb.TabIndex = 6;
             // 
             // label4
             // 
@@ -290,16 +314,16 @@
             label7.TabIndex = 11;
             label7.Text = "Flödesöverblick";
             // 
-            // comboBox2
+            // filterOnCategoryCb
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "1", "2", "3" });
-            comboBox2.Location = new Point(362, 105);
-            comboBox2.Margin = new Padding(3, 4, 3, 4);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(138, 28);
-            comboBox2.TabIndex = 12;
-            comboBox2.Text = "Filtrera...";
+            filterOnCategoryCb.FormattingEnabled = true;
+            filterOnCategoryCb.Items.AddRange(new object[] { "1", "2", "3" });
+            filterOnCategoryCb.Location = new Point(362, 105);
+            filterOnCategoryCb.Margin = new Padding(3, 4, 3, 4);
+            filterOnCategoryCb.Name = "filterOnCategoryCb";
+            filterOnCategoryCb.Size = new Size(138, 28);
+            filterOnCategoryCb.TabIndex = 12;
+            filterOnCategoryCb.Text = "Filtrera...";
             // 
             // button3
             // 
@@ -358,30 +382,6 @@
             button6.Text = "Redigera flöde";
             button6.UseVisualStyleBackColor = true;
             // 
-            // categoriesLv
-            // 
-            categoriesLv.Location = new Point(12, 578);
-            categoriesLv.Name = "categoriesLv";
-            categoriesLv.Size = new Size(131, 186);
-            categoriesLv.TabIndex = 23;
-            categoriesLv.UseCompatibleStateImageBehavior = false;
-            // 
-            // newCategoryNameTxt
-            // 
-            newCategoryNameTxt.Location = new Point(171, 578);
-            newCategoryNameTxt.Name = "newCategoryNameTxt";
-            newCategoryNameTxt.Size = new Size(96, 27);
-            newCategoryNameTxt.TabIndex = 24;
-            // 
-            // newNameLbl
-            // 
-            newNameLbl.AutoSize = true;
-            newNameLbl.Location = new Point(171, 550);
-            newNameLbl.Name = "newNameLbl";
-            newNameLbl.Size = new Size(78, 20);
-            newNameLbl.TabIndex = 25;
-            newNameLbl.Text = "Nytt namn";
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -393,7 +393,7 @@
             Controls.Add(label8);
             Controls.Add(listView2);
             Controls.Add(button3);
-            Controls.Add(comboBox2);
+            Controls.Add(filterOnCategoryCb);
             Controls.Add(label7);
             Controls.Add(listView1);
             Controls.Add(panel1);
@@ -415,7 +415,7 @@
         private TextBox textBox1;
         private Label label2;
         private Button button1;
-        private ComboBox comboBox1;
+        private ComboBox podcastCategoryCb;
         private Label label4;
         private TextBox textBox3;
         private Label label6;
@@ -427,7 +427,7 @@
         private ListView listView1;
         private Button button2;
         private Label label7;
-        private ComboBox comboBox2;
+        private ComboBox filterOnCategoryCb;
         private Button button3;
         private ListView listView2;
         private Label label8;
