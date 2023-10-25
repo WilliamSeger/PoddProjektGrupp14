@@ -14,6 +14,7 @@ namespace PL
             flowController = new FlowController();
             populateAllCombobox();
             populateCategoriesLv();
+            populateListView1();
         }
 
         public void ClearAllCombobox()
@@ -98,7 +99,7 @@ namespace PL
             populateAllCombobox();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             string rss = textBox1.Text;
             string name = "";
@@ -108,7 +109,69 @@ namespace PL
             }
             string categoryName = podcastCategoryCb.GetItemText(podcastCategoryCb.SelectedItem);
             Category category = categoryController.GetCategory(categoryName);
-            flowController.CreateFlow(name, rss, category);
+            await flowController.CreateFlow(name, rss, category);
+            populateListView1();
+        }
+        public void populateListView1()
+        {
+            listView1.Items.Clear();
+            foreach (Flow flow in flowController.GetFlows())
+            {
+                string[] newRow = { $"{flow.Episodes.Count}", $"{flow.Name}", $"{flow.Title}", $"{flow.Category.Name}" };
+                var listViewItem = new ListViewItem(newRow);
+                listView1.Items.Add(listViewItem);
+            }
+        }
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                DisplayEpisodes();
+            }
+            else
+            {
+                listView2.Items.Clear();
+            }
+        }
+
+        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView2.SelectedItems.Count > 0)
+            {
+                DisplayDescription();
+            }
+        }
+
+        private void DisplayEpisodes()
+        {
+            string podcastFlowName = listView1.SelectedItems[0].SubItems[1].Text;
+            Flow flow = flowController.getFlow(podcastFlowName);
+
+            List<Episode> episodes = flow.Episodes;
+
+            listView2.Items.Clear();
+            foreach (Episode episode in episodes)
+            {
+                listView2.Items.Add(episode.Name);
+            }
+        }
+
+        private void DisplayDescription()
+        {
+            string episodeName = listView2.SelectedItems[0].SubItems[0].Text;
+            string podcastFlowName = listView1.SelectedItems[0].SubItems[1].Text;
+            Flow flow = flowController.getFlow(podcastFlowName);
+            List<Episode> episodes = flow.Episodes;
+
+            textBox3.Clear();
+
+            foreach (Episode episode in episodes)
+            {
+                if (episode.Name.Equals(episodeName))
+                {
+                    textBox3.AppendText(episode.Description);
+                }
+            }
         }
     }
 }

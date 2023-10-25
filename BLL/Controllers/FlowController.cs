@@ -20,10 +20,9 @@ namespace BLL.Controllers
             flowRepository = new FlowRepository();
         }
 
-        public async void CreateFlow(string name, string rss, Category category)
+        public async Task CreateFlow(string name, string rss, Category category)
         {
             await GetRSSFeed(rss);
-            Console.WriteLine(feed.Title.Text);
             string title = feed.Title.Text;
             List<Episode> episodes = new List<Episode>();
             foreach(SyndicationItem item in feed.Items)
@@ -50,7 +49,10 @@ namespace BLL.Controllers
             Serializer<Flow> flowSerializer = new Serializer<Flow>();
             feed = await flowSerializer.DeserializeRSS(rss);
         }
-
+        public Flow getFlow(String name)
+        {
+            return flowRepository.GetByName(name);
+        }
         //public void UpdateFlowName(int index, string newName)
         //{
         //    Category category = new Category(newName);

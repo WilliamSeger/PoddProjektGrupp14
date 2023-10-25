@@ -17,6 +17,7 @@ namespace DAL.Repository
         { 
             FlowList = new List<Flow>();
             FlowSerializer = new Serializer<Flow>();
+            FlowList = GetAll();
         }
         
         public List<Flow> GetAll()
