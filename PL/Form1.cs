@@ -6,10 +6,12 @@ namespace PL
     public partial class Form1 : Form
     {
         CategoryController categoryController;
+        FlowController flowController;
         public Form1()
         {
             InitializeComponent();
             categoryController = new CategoryController();
+            flowController = new FlowController();
             populateAllCombobox();
             populateCategoriesLv();
         }
@@ -94,6 +96,19 @@ namespace PL
             populateCategoriesLv();
             ClearAllCombobox();
             populateAllCombobox();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string rss = textBox1.Text;
+            string name = "";
+            if (!textBox2.Equals(null))
+            {
+                name = textBox2.Text;
+            }
+            string categoryName = podcastCategoryCb.GetItemText(podcastCategoryCb.SelectedItem);
+            Category category = categoryController.GetCategory(categoryName);
+            flowController.CreateFlow(name, rss, category);
         }
     }
 }

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "CbwxngtzUxJ1dEukl4gr21oGfwL5rHD0AaSsXRVk+gePdBqJBh5t7FTbFgIPaflY8t4m6dqtaCSxigagEtmoEg==",
+  "dgSpecHash": "eon3jjCBr0k+L6wE1nvfBaIE9pJiZd0SU9F222Us8SIuNAQo5L+LkPXDFA0qaBBVV9wPBDXxgG/qsCGmUnyl5g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\BLL\\BLL.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\BLL\\BLL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\willi\\.nuget\\packages\\system.servicemodel.syndication\\7.0.0\\system.servicemodel.syndication.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
