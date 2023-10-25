@@ -9,14 +9,23 @@ namespace Models
 {
     public class Episode
     {
-        private string Name {  get; set; }
-        private string Description { get; set; }
-        private string Length { get; set; }
-        public Episode(string name, string description, string length)
-        {
-            Name = name;
-            Description = description;
-            Length = length;
+        private string name;
+        private string description;
+        public string Name {  
+            get { return name; }
+            set { name = value; }
         }
+        public string Description
+        {
+            get { return description; }
+            set { description = value; }
+        }
+        public Episode(string name, string description)
+        {
+            this.name = name;
+            this.description = description;
+        }
+
+        public Episode() { }
     }
 }

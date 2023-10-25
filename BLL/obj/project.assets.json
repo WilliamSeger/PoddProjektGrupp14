@@ -2,11 +2,28 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "System.ServiceModel.Syndication/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/System.ServiceModel.Syndication.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.ServiceModel.Syndication.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Models": "1.0.0"
+          "Models": "1.0.0",
+          "System.ServiceModel.Syndication": "7.0.0"
         },
         "compile": {
           "bin/placeholder/DAL.dll": {}
@@ -28,6 +45,33 @@
     }
   },
   "libraries": {
+    "System.ServiceModel.Syndication/7.0.0": {
+      "sha512": "V3q1Jr3KWo+i201/vUUPfg83rjJLhL5+ROh16PtPhaUJRHwoEBoGWtg0r6pFBRPaDqNY6hXvNgHktDj0gvMEpA==",
+      "type": "package",
+      "path": "system.servicemodel.syndication/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.ServiceModel.Syndication.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.ServiceModel.Syndication.targets",
+        "lib/net462/System.ServiceModel.Syndication.dll",
+        "lib/net462/System.ServiceModel.Syndication.xml",
+        "lib/net6.0/System.ServiceModel.Syndication.dll",
+        "lib/net6.0/System.ServiceModel.Syndication.xml",
+        "lib/net7.0/System.ServiceModel.Syndication.dll",
+        "lib/net7.0/System.ServiceModel.Syndication.xml",
+        "lib/netstandard2.0/System.ServiceModel.Syndication.dll",
+        "lib/netstandard2.0/System.ServiceModel.Syndication.xml",
+        "system.servicemodel.syndication.7.0.0.nupkg.sha512",
+        "system.servicemodel.syndication.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "DAL/1.0.0": {
       "type": "project",
       "path": "../DAL/DAL.csproj",
@@ -42,7 +86,8 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "DAL >= 1.0.0",
-      "Models >= 1.0.0"
+      "Models >= 1.0.0",
+      "System.ServiceModel.Syndication >= 7.0.0"
     ]
   },
   "packageFolders": {
@@ -52,11 +97,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\BLL\\BLL.csproj",
+      "projectUniqueName": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\BLL\\BLL.csproj",
       "projectName": "BLL",
-      "projectPath": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\BLL\\BLL.csproj",
+      "projectPath": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\BLL\\BLL.csproj",
       "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\BLL\\obj\\",
+      "outputPath": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -71,17 +116,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\DAL\\DAL.csproj"
+            "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\DAL\\DAL.csproj"
             },
-            "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj": {
-              "projectPath": "C:\\Users\\willi\\Source\\Repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj"
+            "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj"
             }
           }
         }
@@ -95,6 +141,12 @@
     "frameworks": {
       "net7.0": {
         "targetAlias": "net7.0",
+        "dependencies": {
+          "System.ServiceModel.Syndication": {
+            "target": "Package",
+            "version": "[7.0.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -111,7 +163,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -28,6 +28,11 @@ namespace BLL.Controllers
             return categoryRepository.GetAll();
         }
 
+        public Category GetCategory(string name)
+        {
+            return categoryRepository.GetByName(name);
+        }
+
         public void DeleteCategory(int index)
         {
             categoryRepository.Delete(index);
