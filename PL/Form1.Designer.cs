@@ -59,10 +59,9 @@
             listView2 = new ListView();
             columnHeader1 = new ColumnHeader();
             label8 = new Label();
-            listView3 = new ListView();
             label9 = new Label();
             button6 = new Button();
-            columnHeader2 = new ColumnHeader();
+            textBox3 = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -371,17 +370,6 @@
             label8.TabIndex = 15;
             label8.Text = "Avsnitt";
             // 
-            // listView3
-            // 
-            listView3.Columns.AddRange(new ColumnHeader[] { columnHeader2 });
-            listView3.Location = new Point(999, 160);
-            listView3.Margin = new Padding(3, 4, 3, 4);
-            listView3.Name = "listView3";
-            listView3.Size = new Size(237, 227);
-            listView3.TabIndex = 16;
-            listView3.UseCompatibleStateImageBehavior = false;
-            listView3.View = View.Details;
-            // 
             // label9
             // 
             label9.AutoSize = true;
@@ -401,19 +389,24 @@
             button6.Text = "Redigera flöde";
             button6.UseVisualStyleBackColor = true;
             // 
-            // columnHeader2
+            // textBox3
             // 
-            columnHeader2.Text = " ";
-            columnHeader2.Width = 120;
+            textBox3.Location = new Point(999, 160);
+            textBox3.Multiline = true;
+            textBox3.Name = "textBox3";
+            textBox3.ReadOnly = true;
+            textBox3.ScrollBars = ScrollBars.Vertical;
+            textBox3.Size = new Size(239, 492);
+            textBox3.TabIndex = 20;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1471, 803);
+            Controls.Add(textBox3);
             Controls.Add(button6);
             Controls.Add(label9);
-            Controls.Add(listView3);
             Controls.Add(label8);
             Controls.Add(listView2);
             Controls.Add(button3);
@@ -455,7 +448,6 @@
         private Button button3;
         private ListView listView2;
         private Label label8;
-        private ListView listView3;
         private Label label9;
         private Button removeCategoryBtn;
         private Button editCategoryBtn;
@@ -466,6 +458,6 @@
         private TextBox newCategoryNameTxt;
         private ListView categoriesLv;
         private ColumnHeader columnHeader1;
-        private ColumnHeader columnHeader2;
+        private TextBox textBox3;
     }
 }

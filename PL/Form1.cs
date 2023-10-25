@@ -161,20 +161,17 @@ namespace PL
             string episodeName = listView2.SelectedItems[0].SubItems[0].Text;
             string podcastFlowName = listView1.SelectedItems[0].SubItems[1].Text;
             Flow flow = flowController.getFlow(podcastFlowName);
-
             List<Episode> episodes = flow.Episodes;
 
-            listView3.Items.Clear();
+            textBox3.Clear();
 
             foreach (Episode episode in episodes)
             {
                 if (episode.Name.Equals(episodeName))
                 {
-                    listView3.Items.Add(episode.Description);
-
+                    textBox3.AppendText(episode.Description);
                 }
             }
-
         }
     }
 }
