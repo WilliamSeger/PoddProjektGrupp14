@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\PL\\PL.csproj": {}
+    "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\PL\\PL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\BLL\\BLL.csproj": {
+    "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\BLL\\BLL.csproj",
+        "projectUniqueName": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\BLL\\BLL.csproj",
-        "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\BLL\\obj\\",
+        "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\BLL\\BLL.csproj",
+        "packagesPath": "C:\\Users\\alexm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\BLL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\willi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\alexm\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,18 +22,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\DAL\\DAL.csproj"
+              "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\DAL\\DAL.csproj"
               },
-              "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj"
+              "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj"
               }
             }
           }
@@ -73,25 +68,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\DAL\\DAL.csproj": {
+    "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\alexm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\willi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\alexm\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,15 +90,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj"
+              "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj"
               }
             }
           }
@@ -143,25 +133,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj": {
+    "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj",
-        "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\obj\\",
+        "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\alexm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\willi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\alexm\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -169,7 +155,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -203,25 +188,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\PL\\PL.csproj": {
+    "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\PL\\PL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\PL\\PL.csproj",
+        "projectUniqueName": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\PL\\PL.csproj",
         "projectName": "PL",
-        "projectPath": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\PL\\PL.csproj",
-        "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\PL\\obj\\",
+        "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\PL\\PL.csproj",
+        "packagesPath": "C:\\Users\\alexm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\PL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\willi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\alexm\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -229,18 +210,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\BLL\\BLL.csproj": {
-                "projectPath": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\BLL\\BLL.csproj"
+              "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\BLL\\BLL.csproj": {
+                "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\BLL\\BLL.csproj"
               },
-              "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\Models\\Models.csproj"
+              "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj"
               }
             }
           }
@@ -273,7 +253,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
