@@ -183,7 +183,7 @@ namespace PL
         private void button6_Click(object sender, EventArgs e)
         {
             //Updates name of flow 
-            if(listView1.SelectedItems.Count > 0)
+            if (listView1.SelectedItems.Count > 0)
             {
                 string podcastFlowName = listView1.SelectedItems[0].SubItems[1].Text;
                 int flowIndex = listView1.SelectedIndices[0];
@@ -207,6 +207,41 @@ namespace PL
                 flowController.updateFlowCategory(flowIndex, flow, newCategory);
                 populateListView1();
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                int flowIndex = listView1.SelectedIndices[0];
+                flowController.DeleteFlow(flowIndex);
+                populateListView1();
+                listView2.Items.Clear();
+                richTextBox1.Clear();
+            }
+        }
+
+        private void filterOnCategoryCb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string categoryFilter = filterOnCategoryCb.GetItemText(filterOnCategoryCb.SelectedItem);
+            List<Flow> flowList = flowController.GetFlows();
+
+            var queryExpression = from flow in flowList
+                                  where flow.Category.Name.Equals(categoryFilter)
+                                  select flow;
+
+            listView1.Items.Clear();
+            foreach (var flow in queryExpression)
+            {
+                string[] newRow = { $"{flow.Episodes.Count}", $"{flow.Name}", $"{flow.Title}", $"{flow.Category.Name}" };
+                var listViewItem = new ListViewItem(newRow);
+                listView1.Items.Add(listViewItem);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            populateListView1();
         }
     }
 }
