@@ -67,6 +67,7 @@
             label13 = new Label();
             comboBox1 = new ComboBox();
             button2 = new Button();
+            button4 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -336,16 +337,18 @@
             filterOnCategoryCb.Size = new Size(138, 28);
             filterOnCategoryCb.TabIndex = 12;
             filterOnCategoryCb.Text = "Filtrera...";
+            filterOnCategoryCb.SelectedIndexChanged += filterOnCategoryCb_SelectedIndexChanged;
             // 
             // button3
             // 
-            button3.Location = new Point(518, 105);
+            button3.Location = new Point(506, 102);
             button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
             button3.Size = new Size(97, 31);
             button3.TabIndex = 13;
             button3.Text = "Återställ";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // listView2
             // 
@@ -448,11 +451,22 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // button4
+            // 
+            button4.Location = new Point(658, 106);
+            button4.Name = "button4";
+            button4.Size = new Size(107, 29);
+            button4.TabIndex = 28;
+            button4.Text = "Radera Flöde";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1471, 803);
+            Controls.Add(button4);
             Controls.Add(button2);
             Controls.Add(comboBox1);
             Controls.Add(label13);
@@ -518,5 +532,6 @@
         private Label label13;
         private ComboBox comboBox1;
         private Button button2;
+        private Button button4;
     }
 }
