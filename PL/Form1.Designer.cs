@@ -61,7 +61,12 @@
             label8 = new Label();
             label9 = new Label();
             button6 = new Button();
+            richTextBox1 = new RichTextBox();
             textBox3 = new TextBox();
+            label12 = new Label();
+            label13 = new Label();
+            comboBox1 = new ComboBox();
+            button2 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -382,29 +387,78 @@
             // 
             // button6
             // 
-            button6.Location = new Point(362, 669);
+            button6.Location = new Point(362, 733);
             button6.Name = "button6";
-            button6.Size = new Size(121, 29);
+            button6.Size = new Size(125, 29);
             button6.TabIndex = 19;
-            button6.Text = "Redigera flöde";
+            button6.Text = "Ändra Namn";
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.BorderStyle = BorderStyle.FixedSingle;
+            richTextBox1.Location = new Point(999, 160);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.ReadOnly = true;
+            richTextBox1.Size = new Size(239, 492);
+            richTextBox1.TabIndex = 21;
+            richTextBox1.Text = "";
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(999, 160);
-            textBox3.Multiline = true;
+            textBox3.Location = new Point(362, 696);
             textBox3.Name = "textBox3";
-            textBox3.ReadOnly = true;
-            textBox3.ScrollBars = ScrollBars.Vertical;
-            textBox3.Size = new Size(239, 492);
-            textBox3.TabIndex = 20;
+            textBox3.Size = new Size(125, 27);
+            textBox3.TabIndex = 22;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(362, 667);
+            label12.Name = "label12";
+            label12.Size = new Size(81, 20);
+            label12.TabIndex = 24;
+            label12.Text = "Nytt Namn";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(631, 667);
+            label13.Name = "label13";
+            label13.Size = new Size(88, 20);
+            label13.TabIndex = 25;
+            label13.Text = "Ny Kategori";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(631, 696);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(134, 28);
+            comboBox1.TabIndex = 26;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(631, 733);
+            button2.Name = "button2";
+            button2.Size = new Size(134, 29);
+            button2.TabIndex = 27;
+            button2.Text = "Ändra Kategori";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1471, 803);
+            Controls.Add(button2);
+            Controls.Add(comboBox1);
+            Controls.Add(label13);
+            Controls.Add(label12);
             Controls.Add(textBox3);
+            Controls.Add(richTextBox1);
             Controls.Add(button6);
             Controls.Add(label9);
             Controls.Add(label8);
@@ -458,6 +512,11 @@
         private TextBox newCategoryNameTxt;
         private ListView categoriesLv;
         private ColumnHeader columnHeader1;
+        private RichTextBox richTextBox1;
         private TextBox textBox3;
+        private Label label12;
+        private Label label13;
+        private ComboBox comboBox1;
+        private Button button2;
     }
 }

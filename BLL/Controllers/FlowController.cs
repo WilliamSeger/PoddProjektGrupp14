@@ -53,10 +53,15 @@ namespace BLL.Controllers
         {
             return flowRepository.GetByName(name);
         }
-        //public void UpdateFlowName(int index, string newName)
-        //{
-        //    Category category = new Category(newName);
-        //    categoryRepository.Update(category, index);
-        //}
+        public void UpdateFlowName(int index, Flow flow, string newName)
+        {
+            flow.Name = newName;
+            flowRepository.Update(flow, index);
+        }
+        public void updateFlowCategory(int index, Flow flow, Category category)
+        {
+            flow.Category = category;
+            flowRepository.Update(flow, index);
+        }
     }
 }

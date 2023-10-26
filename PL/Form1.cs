@@ -1,5 +1,6 @@
 using Models;
 using BLL.Controllers;
+using System.Text.RegularExpressions;
 
 namespace PL
 {
@@ -21,6 +22,7 @@ namespace PL
         {
             podcastCategoryCb.Items.Clear();
             filterOnCategoryCb.Items.Clear();
+            comboBox1.Items.Clear();
         }
 
         public void populateAllCombobox()
@@ -29,6 +31,7 @@ namespace PL
             {
                 podcastCategoryCb.Items.Add(category.Name);
                 filterOnCategoryCb.Items.Add(category.Name);
+                comboBox1.Items.Add(category.Name);
             }
         }
 
@@ -131,6 +134,7 @@ namespace PL
             else
             {
                 listView2.Items.Clear();
+                richTextBox1.Clear();
             }
         }
 
@@ -142,7 +146,7 @@ namespace PL
             }
         }
 
-        private void DisplayEpisodes()
+        private async void DisplayEpisodes()
         {
             string podcastFlowName = listView1.SelectedItems[0].SubItems[1].Text;
             Flow flow = flowController.getFlow(podcastFlowName);
@@ -163,14 +167,45 @@ namespace PL
             Flow flow = flowController.getFlow(podcastFlowName);
             List<Episode> episodes = flow.Episodes;
 
-            textBox3.Clear();
+            richTextBox1.Clear();
 
             foreach (Episode episode in episodes)
             {
                 if (episode.Name.Equals(episodeName))
                 {
-                    textBox3.AppendText(episode.Description);
+
+                    string regexDescription = Regex.Replace(episode.Description, "<.*?>", string.Empty);
+                    richTextBox1.AppendText(regexDescription);
                 }
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //Updates name of flow 
+            if(listView1.SelectedItems.Count > 0)
+            {
+                string podcastFlowName = listView1.SelectedItems[0].SubItems[1].Text;
+                int flowIndex = listView1.SelectedIndices[0];
+                Flow flow = flowController.getFlow(podcastFlowName);
+                string newName = textBox3.Text;
+                flowController.UpdateFlowName(flowIndex, flow, newName);
+                populateListView1();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Updates the category of flow
+            if (listView1.SelectedItems.Count > 0)
+            {
+                string podcastFlowName = listView1.SelectedItems[0].SubItems[1].Text;
+                int flowIndex = listView1.SelectedIndices[0];
+                Flow flow = flowController.getFlow(podcastFlowName);
+                string newCategoryName = comboBox1.GetItemText(comboBox1.SelectedItem);
+                Category newCategory = categoryController.GetCategory(newCategoryName);
+                flowController.updateFlowCategory(flowIndex, flow, newCategory);
+                populateListView1();
             }
         }
     }
