@@ -8,6 +8,7 @@ namespace PL
     {
         CategoryController categoryController;
         FlowController flowController;
+        ValidationPL validation;
         public Form1()
         {
             InitializeComponent();
@@ -47,7 +48,7 @@ namespace PL
         {
             string categoryName = categoryNameTxt.Text;
 
-            if (categoryName != "")
+            if (categoryName != "" && !validation.isCategoryNameTaken(categoryName))
             {
                 categoryController.CreateCategory(categoryName);
                 categoryNameTxt.Clear();
@@ -58,7 +59,7 @@ namespace PL
             }
             else
             {
-                MessageBox.Show("Vänligen ange ett kategorinamn");
+                MessageBox.Show("Vänligen ange ett unikt kategorinamn");
             }
         }
 
@@ -69,10 +70,9 @@ namespace PL
                 int categoryIndex = categoriesLv.SelectedIndices[0];
                 string newCategoryName = newCategoryNameTxt.Text;
 
-                if (newCategoryName != "")
+                if (newCategoryName != "" && validation.isCategoryNameTaken(newCategoryName))
                 {
                     categoryController.UpdateCategoryName(categoryIndex, newCategoryName);
-
                     newCategoryNameTxt.Clear();
                     ClearAllCombobox();
                     populateAllCombobox();
@@ -81,7 +81,7 @@ namespace PL
                 }
                 else
                 {
-                    MessageBox.Show("Vänligen ange ett nytt kategorinamn");
+                    MessageBox.Show("Vänligen ange ett nytt kategorinamn som är unikt");
                 }
             }
             else
@@ -104,16 +104,37 @@ namespace PL
 
         private async void button1_Click(object sender, EventArgs e)
         {
+            
             string rss = textBox1.Text;
             string name = "";
-            if (!textBox2.Equals(null))
+            if (validation.isNull(textBox2))
             {
                 name = textBox2.Text;
             }
             string categoryName = podcastCategoryCb.GetItemText(podcastCategoryCb.SelectedItem);
-            Category category = categoryController.GetCategory(categoryName);
-            await flowController.CreateFlow(name, rss, category);
-            populateListView1();
+            if (!validation.CheckURL(rss) && validation.CheckEmptyTxt(categoryName) && validation.isFlowNameTaken(name))
+            {
+                MessageBox.Show("Ogiltig URL, testa igen med en annan! Måste välja en Kategori, Namn på Flödet måste vara unikt!");
+            }
+            else if (!validation.CheckURL(rss))
+            {
+                MessageBox.Show("Ogiltig URL, testa igen med en annan!");
+            }
+            else if(validation.CheckEmptyTxt(categoryName))
+            {
+                MessageBox.Show("Måste välja en kategori!");
+            }
+            else if(validation.isFlowNameTaken(name))
+            {
+                MessageBox.Show("Namn på Flödet måste vara unikt!");
+            }
+            else
+            {
+                Category category = categoryController.GetCategory(categoryName);
+                await flowController.CreateFlow(name, rss, category);
+                populateListView1();
+            }
+
         }
         public void populateListView1()
         {

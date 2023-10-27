@@ -110,19 +110,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\alexm\\.nuget\\packages\\": {}
+    "C:\\Users\\HP Elitebook\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\PL\\PL.csproj",
+      "projectUniqueName": "C:\\Users\\HP Elitebook\\source\\repos\\PoddProjektGrupp14\\PL\\PL.csproj",
       "projectName": "PL",
-      "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\PL\\PL.csproj",
-      "packagesPath": "C:\\Users\\alexm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\PL\\obj\\",
+      "projectPath": "C:\\Users\\HP Elitebook\\source\\repos\\PoddProjektGrupp14\\PL\\PL.csproj",
+      "packagesPath": "C:\\Users\\HP Elitebook\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HP Elitebook\\source\\repos\\PoddProjektGrupp14\\PL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\alexm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP Elitebook\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -136,11 +136,11 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\BLL\\BLL.csproj": {
-              "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\BLL\\BLL.csproj"
+            "C:\\Users\\HP Elitebook\\source\\repos\\PoddProjektGrupp14\\BLL\\BLL.csproj": {
+              "projectPath": "C:\\Users\\HP Elitebook\\source\\repos\\PoddProjektGrupp14\\BLL\\BLL.csproj"
             },
-            "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj": {
-              "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj"
+            "C:\\Users\\HP Elitebook\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\HP Elitebook\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj"
             }
           }
         }
@@ -173,7 +173,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
