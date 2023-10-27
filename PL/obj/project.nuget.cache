@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "rZTXH8cU9CUdA34ewhZJAZWL4LY/Xii653qgxN8mQWKtfBj7YGhVWHFqK0696HMbHsJj4YXq5j4B9E0jXpAdyw==",
+  "dgSpecHash": "DxUFYv/9cCRrjxfiaTCOEeFBneva7yT3uHI/8icM1kBaM4q8gZmnW12V8L/mtIJYKmJ24UuFiz0Tar4n/V5yEQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP Elitebook\\source\\repos\\PoddProjektGrupp14\\PL\\PL.csproj",
+  "projectFilePath": "C:\\Users\\willi\\source\\repos\\WilliamSeger\\PoddProjektGrupp14\\PL\\PL.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\HP Elitebook\\.nuget\\packages\\system.servicemodel.syndication\\7.0.0\\system.servicemodel.syndication.7.0.0.nupkg.sha512"
+    "C:\\Users\\willi\\.nuget\\packages\\system.servicemodel.syndication\\7.0.0\\system.servicemodel.syndication.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
