@@ -71,19 +71,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\alexm\\.nuget\\packages\\": {}
+    "C:\\Users\\HP Elitebook\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\HP Elitebook\\source\\repos\\PoddProjektGrupp14\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\DAL\\DAL.csproj",
-      "packagesPath": "C:\\Users\\alexm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\DAL\\obj\\",
+      "projectPath": "C:\\Users\\HP Elitebook\\source\\repos\\PoddProjektGrupp14\\DAL\\DAL.csproj",
+      "packagesPath": "C:\\Users\\HP Elitebook\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HP Elitebook\\source\\repos\\PoddProjektGrupp14\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\alexm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP Elitebook\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -97,8 +97,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj": {
-              "projectPath": "C:\\Users\\alexm\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj"
+            "C:\\Users\\HP Elitebook\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\HP Elitebook\\source\\repos\\PoddProjektGrupp14\\Models\\Models.csproj"
             }
           }
         }
@@ -134,7 +134,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

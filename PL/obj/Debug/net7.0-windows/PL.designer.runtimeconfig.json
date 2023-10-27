@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\alexm\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\alexm\\.nuget\\packages"
+      "C:\\Users\\HP Elitebook\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\HP Elitebook\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
