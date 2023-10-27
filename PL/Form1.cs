@@ -71,7 +71,7 @@ namespace PL
                 int categoryIndex = categoriesLv.SelectedIndices[0];
                 string newCategoryName = newCategoryNameTxt.Text;
 
-                if (newCategoryName != "" && validation.isCategoryNameTaken(newCategoryName))
+                if (newCategoryName != "" && !validation.isCategoryNameTaken(newCategoryName))
                 {
                     categoryController.UpdateCategoryName(categoryIndex, newCategoryName);
                     newCategoryNameTxt.Clear();
@@ -93,14 +93,23 @@ namespace PL
 
         private void removeCategoryBtn_Click(object sender, EventArgs e)
         {
-            int categoryIndex = categoriesLv.SelectedIndices[0];
-            categoryController.DeleteCategory(categoryIndex);
+            if(categoriesLv.SelectedItems.Count > 0)
+            {
+                int categoryIndex = categoriesLv.SelectedIndices[0];
+                categoryController.DeleteCategory(categoryIndex);
 
-            //Uppdaterar combobox och listview
-            categoriesLv.Clear();
-            populateCategoriesLv();
-            ClearAllCombobox();
-            populateAllCombobox();
+                //Uppdaterar combobox och listview
+                categoriesLv.Clear();
+                populateCategoriesLv();
+                podcastCategoryCb.SelectedIndex = -1;
+                ClearAllCombobox();
+                populateAllCombobox();
+            }
+            else
+            {
+                MessageBox.Show("Vänligen välj en kategori i listan");
+            }
+               
         }
 
         private async void button1_Click(object sender, EventArgs e)
@@ -108,12 +117,12 @@ namespace PL
             
             string rss = textBox1.Text;
             string name = "";
-            if (validation.isNull(textBox2))
+            if (!validation.isNull(textBox2))
             {
                 name = textBox2.Text;
             }
             string categoryName = podcastCategoryCb.GetItemText(podcastCategoryCb.SelectedItem);
-            if (!validation.CheckURL(rss) && validation.CheckEmptyTxt(categoryName) && validation.isFlowNameTaken(name))
+            if (!validation.CheckURL(rss) && validation.CheckEmptyTxt(categoryName))
             {
                 MessageBox.Show("Ogiltig URL, testa igen med en annan! Måste välja en Kategori, Namn på Flödet måste vara unikt!");
             }
@@ -125,14 +134,13 @@ namespace PL
             {
                 MessageBox.Show("Måste välja en kategori!");
             }
-            else if(validation.isFlowNameTaken(name))
-            {
-                MessageBox.Show("Namn på Flödet måste vara unikt!");
-            }
             else
             {
                 Category category = categoryController.GetCategory(categoryName);
-                await flowController.CreateFlow(name, rss, category);
+                if (!await flowController.CreateFlow(name, rss, category))
+                {
+                    MessageBox.Show("Denna URL är trasig!");
+                }
                 populateListView1();
             }
 
@@ -219,7 +227,7 @@ namespace PL
         private void button2_Click(object sender, EventArgs e)
         {
             //Updates the category of flow
-            if (listView1.SelectedItems.Count > 0)
+            if (listView1.SelectedItems.Count > 0 && comboBox1.SelectedItem != null)
             {
                 string podcastFlowName = listView1.SelectedItems[0].SubItems[1].Text;
                 int flowIndex = listView1.SelectedIndices[0];
@@ -228,6 +236,10 @@ namespace PL
                 Category newCategory = categoryController.GetCategory(newCategoryName);
                 flowController.updateFlowCategory(flowIndex, flow, newCategory);
                 populateListView1();
+            }
+            else
+            {
+                MessageBox.Show("Måste välja en kategori och ett flöde");
             }
         }
 
