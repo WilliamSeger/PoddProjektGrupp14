@@ -53,8 +53,6 @@ namespace Models
             }
         }
 
-
-
         public bool isCategoryNameTaken(string name)
         {
             Category category = categoryController.GetCategory(name);

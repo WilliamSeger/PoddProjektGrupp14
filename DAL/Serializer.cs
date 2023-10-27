@@ -12,6 +12,13 @@ namespace DAL
 {
     public class Serializer<T>
     {
+        ValidationDAL validation;
+
+        public Serializer()
+        {
+            validation = new ValidationDAL();
+        }
+
         public void Serialize(List<T> list)
         {
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<T>));
@@ -25,15 +32,14 @@ namespace DAL
         public List<T> Deserialize()
         {
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<T>));
-
-            try
-            {
-                using (FileStream inFile = new FileStream((typeof(T).Name + ".xml"), FileMode.Open, FileAccess.Read))
+            string path = typeof(T).Name + ".xml";
+            if (validation.ValidateXmlFile(path) && File.Exists(path)) {
+                using (FileStream inFile = new FileStream(path, FileMode.Open, FileAccess.Read))
                 {
                     return (List<T>)xmlSerializer.Deserialize(inFile);
                 }
             }
-            catch(Exception ex)
+            else
             {
                 return new List<T>();
             }

@@ -14,6 +14,7 @@ namespace PL
             InitializeComponent();
             categoryController = new CategoryController();
             flowController = new FlowController();
+            validation = new ValidationPL();
             populateAllCombobox();
             populateCategoriesLv();
             populateListView1();
