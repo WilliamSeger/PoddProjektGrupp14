@@ -20,18 +20,30 @@ namespace BLL.Controllers
             flowRepository = new FlowRepository();
         }
 
-        public async Task CreateFlow(string name, string rss, Category category)
+        public async Task<bool> CreateFlow(string name, string rss, Category category)
         {
             await GetRSSFeed(rss);
             string title = feed.Title.Text;
             List<Episode> episodes = new List<Episode>();
+            bool isOk = true;
             foreach(SyndicationItem item in feed.Items)
             {
-                Episode episode = new Episode(item.Title.Text, item.Summary.Text);
-                episodes.Add(episode);
+                if (item.Summary != null)
+                {
+                    Episode episode = new Episode(item.Title.Text, item.Summary.Text);
+                    episodes.Add(episode);
+                }
+                else
+                {
+                    isOk = false; break;
+                }
             }
-            Flow newFlow = new Flow(name, title, category, episodes);
-            flowRepository.Insert(newFlow);
+            if (isOk)
+            {
+                Flow newFlow = new Flow(name, title, category, episodes);
+                flowRepository.Insert(newFlow);
+            }
+            return isOk;
         }
 
         public List<Flow> GetFlows()
