@@ -96,32 +96,33 @@
             panel1.Dock = DockStyle.Left;
             panel1.ImeMode = ImeMode.On;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(296, 803);
+            panel1.Size = new Size(259, 602);
             panel1.TabIndex = 0;
             // 
             // newNameLbl
             // 
             newNameLbl.AutoSize = true;
-            newNameLbl.Location = new Point(171, 549);
+            newNameLbl.Location = new Point(150, 412);
             newNameLbl.Name = "newNameLbl";
-            newNameLbl.Size = new Size(78, 20);
+            newNameLbl.Size = new Size(64, 15);
             newNameLbl.TabIndex = 25;
             newNameLbl.Text = "Nytt namn";
             // 
             // newCategoryNameTxt
             // 
-            newCategoryNameTxt.Location = new Point(171, 579);
+            newCategoryNameTxt.Location = new Point(150, 434);
+            newCategoryNameTxt.Margin = new Padding(3, 2, 3, 2);
             newCategoryNameTxt.Name = "newCategoryNameTxt";
-            newCategoryNameTxt.Size = new Size(95, 27);
+            newCategoryNameTxt.Size = new Size(84, 23);
             newCategoryNameTxt.TabIndex = 24;
             // 
             // categoriesLv
             // 
-            categoriesLv.Location = new Point(11, 579);
+            categoriesLv.Location = new Point(10, 434);
+            categoriesLv.Margin = new Padding(3, 2, 3, 2);
             categoriesLv.Name = "categoriesLv";
-            categoriesLv.Size = new Size(131, 185);
+            categoriesLv.Size = new Size(115, 140);
             categoriesLv.TabIndex = 23;
             categoriesLv.UseCompatibleStateImageBehavior = false;
             categoriesLv.View = View.List;
@@ -130,18 +131,17 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(11, 549);
+            label11.Location = new Point(10, 412);
             label11.Name = "label11";
-            label11.Size = new Size(67, 20);
+            label11.Size = new Size(51, 15);
             label11.TabIndex = 22;
             label11.Text = "Kategori";
             // 
             // removeCategoryBtn
             // 
-            removeCategoryBtn.Location = new Point(170, 733);
-            removeCategoryBtn.Margin = new Padding(3, 4, 3, 4);
+            removeCategoryBtn.Location = new Point(149, 550);
             removeCategoryBtn.Name = "removeCategoryBtn";
-            removeCategoryBtn.Size = new Size(97, 31);
+            removeCategoryBtn.Size = new Size(85, 23);
             removeCategoryBtn.TabIndex = 20;
             removeCategoryBtn.Text = "Ta bort";
             removeCategoryBtn.UseVisualStyleBackColor = true;
@@ -149,10 +149,9 @@
             // 
             // editCategoryBtn
             // 
-            editCategoryBtn.Location = new Point(170, 621);
-            editCategoryBtn.Margin = new Padding(3, 4, 3, 4);
+            editCategoryBtn.Location = new Point(149, 466);
             editCategoryBtn.Name = "editCategoryBtn";
-            editCategoryBtn.Size = new Size(97, 31);
+            editCategoryBtn.Size = new Size(85, 23);
             editCategoryBtn.TabIndex = 19;
             editCategoryBtn.Text = "Ändra";
             editCategoryBtn.UseVisualStyleBackColor = true;
@@ -162,18 +161,17 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.Location = new Point(14, 484);
+            label10.Location = new Point(12, 363);
             label10.Name = "label10";
-            label10.Size = new Size(240, 32);
+            label10.Size = new Size(189, 25);
             label10.TabIndex = 18;
             label10.Text = "Redigera kategorier";
             // 
             // addCategoryBtn
             // 
-            addCategoryBtn.Location = new Point(170, 401);
-            addCategoryBtn.Margin = new Padding(3, 4, 3, 4);
+            addCategoryBtn.Location = new Point(149, 301);
             addCategoryBtn.Name = "addCategoryBtn";
-            addCategoryBtn.Size = new Size(97, 31);
+            addCategoryBtn.Size = new Size(85, 23);
             addCategoryBtn.TabIndex = 11;
             addCategoryBtn.Text = "Lägg till";
             addCategoryBtn.UseVisualStyleBackColor = true;
@@ -181,19 +179,18 @@
             // 
             // categoryNameTxt
             // 
-            categoryNameTxt.Location = new Point(14, 403);
-            categoryNameTxt.Margin = new Padding(3, 4, 3, 4);
+            categoryNameTxt.Location = new Point(12, 302);
             categoryNameTxt.Name = "categoryNameTxt";
-            categoryNameTxt.Size = new Size(129, 27);
+            categoryNameTxt.Size = new Size(113, 23);
             categoryNameTxt.TabIndex = 10;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(14, 377);
+            label6.Location = new Point(12, 283);
             label6.Name = "label6";
-            label6.Size = new Size(110, 20);
+            label6.Size = new Size(85, 15);
             label6.TabIndex = 9;
             label6.Text = "Namn (valfritt)";
             // 
@@ -201,18 +198,17 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(14, 312);
+            label5.Location = new Point(12, 234);
             label5.Name = "label5";
-            label5.Size = new Size(208, 32);
+            label5.Size = new Size(163, 25);
             label5.TabIndex = 8;
             label5.Text = "Lägg till kategori";
             // 
             // button1
             // 
-            button1.Location = new Point(170, 228);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(149, 171);
             button1.Name = "button1";
-            button1.Size = new Size(97, 31);
+            button1.Size = new Size(85, 23);
             button1.TabIndex = 7;
             button1.Text = "Lägg till";
             button1.UseVisualStyleBackColor = true;
@@ -221,55 +217,52 @@
             // podcastCategoryCb
             // 
             podcastCategoryCb.FormattingEnabled = true;
-            podcastCategoryCb.Location = new Point(14, 228);
-            podcastCategoryCb.Margin = new Padding(3, 4, 3, 4);
+            podcastCategoryCb.Location = new Point(12, 171);
             podcastCategoryCb.Name = "podcastCategoryCb";
-            podcastCategoryCb.Size = new Size(129, 28);
+            podcastCategoryCb.Size = new Size(113, 23);
             podcastCategoryCb.TabIndex = 6;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(14, 204);
+            label4.Location = new Point(12, 153);
             label4.Name = "label4";
-            label4.Size = new Size(67, 20);
+            label4.Size = new Size(51, 15);
             label4.TabIndex = 5;
             label4.Text = "Kategori";
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(170, 141);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
+            textBox2.Location = new Point(149, 106);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(97, 27);
+            textBox2.Size = new Size(85, 23);
             textBox2.TabIndex = 4;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(170, 117);
+            label3.Location = new Point(149, 88);
             label3.Name = "label3";
-            label3.Size = new Size(110, 20);
+            label3.Size = new Size(85, 15);
             label3.TabIndex = 3;
             label3.Text = "Namn (valfritt)";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(14, 141);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
+            textBox1.Location = new Point(12, 106);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(129, 27);
+            textBox1.Size = new Size(113, 23);
             textBox1.TabIndex = 2;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(14, 117);
+            label2.Location = new Point(12, 88);
             label2.Name = "label2";
-            label2.Size = new Size(92, 20);
+            label2.Size = new Size(73, 15);
             label2.TabIndex = 1;
             label2.Text = "Podcast URL";
             // 
@@ -277,9 +270,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(14, 51);
+            label1.Location = new Point(12, 38);
             label1.Name = "label1";
-            label1.Size = new Size(172, 32);
+            label1.Size = new Size(134, 25);
             label1.TabIndex = 0;
             label1.Text = "Lägg till flöde";
             // 
@@ -309,10 +302,9 @@
             listView1.Columns.AddRange(new ColumnHeader[] { antalAvsnitt, namn, titel, kategori });
             listView1.Cursor = Cursors.Hand;
             listView1.FullRowSelect = true;
-            listView1.Location = new Point(362, 160);
-            listView1.Margin = new Padding(3, 4, 3, 4);
+            listView1.Location = new Point(317, 120);
             listView1.Name = "listView1";
-            listView1.Size = new Size(403, 492);
+            listView1.Size = new Size(353, 370);
             listView1.TabIndex = 1;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
@@ -322,29 +314,27 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(362, 51);
+            label7.Location = new Point(317, 38);
             label7.Name = "label7";
-            label7.Size = new Size(192, 32);
+            label7.Size = new Size(151, 25);
             label7.TabIndex = 11;
             label7.Text = "Flödesöverblick";
             // 
             // filterOnCategoryCb
             // 
             filterOnCategoryCb.FormattingEnabled = true;
-            filterOnCategoryCb.Location = new Point(362, 105);
-            filterOnCategoryCb.Margin = new Padding(3, 4, 3, 4);
+            filterOnCategoryCb.Location = new Point(317, 79);
             filterOnCategoryCb.Name = "filterOnCategoryCb";
-            filterOnCategoryCb.Size = new Size(138, 28);
+            filterOnCategoryCb.Size = new Size(121, 23);
             filterOnCategoryCb.TabIndex = 12;
             filterOnCategoryCb.Text = "Filtrera...";
             filterOnCategoryCb.SelectedIndexChanged += filterOnCategoryCb_SelectedIndexChanged;
             // 
             // button3
             // 
-            button3.Location = new Point(506, 102);
-            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Location = new Point(443, 76);
             button3.Name = "button3";
-            button3.Size = new Size(97, 31);
+            button3.Size = new Size(85, 23);
             button3.TabIndex = 13;
             button3.Text = "Återställ";
             button3.UseVisualStyleBackColor = true;
@@ -354,10 +344,9 @@
             // 
             listView2.Columns.AddRange(new ColumnHeader[] { columnHeader1 });
             listView2.FullRowSelect = true;
-            listView2.Location = new Point(771, 160);
-            listView2.Margin = new Padding(3, 4, 3, 4);
+            listView2.Location = new Point(675, 120);
             listView2.Name = "listView2";
-            listView2.Size = new Size(222, 492);
+            listView2.Size = new Size(195, 370);
             listView2.TabIndex = 14;
             listView2.UseCompatibleStateImageBehavior = false;
             listView2.View = View.Details;
@@ -372,9 +361,9 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(771, 107);
+            label8.Location = new Point(675, 80);
             label8.Name = "label8";
-            label8.Size = new Size(94, 32);
+            label8.Size = new Size(74, 25);
             label8.TabIndex = 15;
             label8.Text = "Avsnitt";
             // 
@@ -382,17 +371,18 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(999, 107);
+            label9.Location = new Point(874, 80);
             label9.Name = "label9";
-            label9.Size = new Size(239, 32);
+            label9.Size = new Size(187, 25);
             label9.TabIndex = 18;
             label9.Text = "Avsnittsbeskrivning";
             // 
             // button6
             // 
-            button6.Location = new Point(362, 733);
+            button6.Location = new Point(317, 550);
+            button6.Margin = new Padding(3, 2, 3, 2);
             button6.Name = "button6";
-            button6.Size = new Size(125, 29);
+            button6.Size = new Size(109, 22);
             button6.TabIndex = 19;
             button6.Text = "Ändra Namn";
             button6.UseVisualStyleBackColor = true;
@@ -401,51 +391,55 @@
             // richTextBox1
             // 
             richTextBox1.BorderStyle = BorderStyle.FixedSingle;
-            richTextBox1.Location = new Point(999, 160);
+            richTextBox1.Location = new Point(874, 120);
+            richTextBox1.Margin = new Padding(3, 2, 3, 2);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.ReadOnly = true;
-            richTextBox1.Size = new Size(239, 492);
+            richTextBox1.Size = new Size(210, 370);
             richTextBox1.TabIndex = 21;
             richTextBox1.Text = "";
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(362, 696);
+            textBox3.Location = new Point(317, 522);
+            textBox3.Margin = new Padding(3, 2, 3, 2);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
+            textBox3.Size = new Size(110, 23);
             textBox3.TabIndex = 22;
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(362, 667);
+            label12.Location = new Point(317, 500);
             label12.Name = "label12";
-            label12.Size = new Size(81, 20);
+            label12.Size = new Size(66, 15);
             label12.TabIndex = 24;
             label12.Text = "Nytt Namn";
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(631, 667);
+            label13.Location = new Point(552, 500);
             label13.Name = "label13";
-            label13.Size = new Size(88, 20);
+            label13.Size = new Size(69, 15);
             label13.TabIndex = 25;
             label13.Text = "Ny Kategori";
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(631, 696);
+            comboBox1.Location = new Point(552, 522);
+            comboBox1.Margin = new Padding(3, 2, 3, 2);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(134, 28);
+            comboBox1.Size = new Size(118, 23);
             comboBox1.TabIndex = 26;
             // 
             // button2
             // 
-            button2.Location = new Point(631, 733);
+            button2.Location = new Point(552, 550);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(134, 29);
+            button2.Size = new Size(117, 22);
             button2.TabIndex = 27;
             button2.Text = "Ändra Kategori";
             button2.UseVisualStyleBackColor = true;
@@ -453,9 +447,10 @@
             // 
             // button4
             // 
-            button4.Location = new Point(658, 106);
+            button4.Location = new Point(576, 80);
+            button4.Margin = new Padding(3, 2, 3, 2);
             button4.Name = "button4";
-            button4.Size = new Size(107, 29);
+            button4.Size = new Size(94, 22);
             button4.TabIndex = 28;
             button4.Text = "Radera Flöde";
             button4.UseVisualStyleBackColor = true;
@@ -463,9 +458,9 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1471, 803);
+            ClientSize = new Size(1287, 602);
             Controls.Add(button4);
             Controls.Add(button2);
             Controls.Add(comboBox1);
@@ -482,9 +477,9 @@
             Controls.Add(label7);
             Controls.Add(listView1);
             Controls.Add(panel1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "PodcastLibrary";
+            Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

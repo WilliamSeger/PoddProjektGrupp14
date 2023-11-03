@@ -17,20 +17,28 @@ namespace BLL.Controllers
 
         public async Task<bool> CreateFlow(string name, string rss, Category category)
         {
+            bool isOk = false;
             await GetRSSFeed(rss);
+            if (feed == null)
+            {
+                return isOk;
+            }
             string title = feed.Title.Text;
             List<Episode> episodes = new List<Episode>();
-            bool isOk = true;
+            
             foreach(SyndicationItem item in feed.Items)
             {
                 if (item.Summary != null)
                 {
                     Episode episode = new Episode(item.Title.Text, item.Summary.Text);
                     episodes.Add(episode);
+                    isOk = true;
                 }
                 else
                 {
-                    isOk = false; break;
+                    Episode episode = new Episode(item.Title.Text);
+                    episodes.Add(episode);
+                    isOk = true;
                 }
             }
             if (isOk)

@@ -41,10 +41,17 @@ namespace DAL
 
         public async Task<SyndicationFeed> DeserializeRSS(string rss)
         {
-            XmlReader reader = XmlReader.Create(rss);
-            SyndicationFeed feed = SyndicationFeed.Load(reader);
-            reader.Close();
-            return feed;
+            try
+            {
+                XmlReader reader = XmlReader.Create(rss);
+                SyndicationFeed feed = SyndicationFeed.Load(reader);
+                reader.Close();
+                return feed;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
     }
 }

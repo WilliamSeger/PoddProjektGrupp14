@@ -19,6 +19,11 @@ namespace Models
             this.name = name;
             this.description = description;
         }
+        public Episode(string name)
+        {
+            this.name = name;
+            description = "Det här avsnittet har ingen beskrivning.";
+        }
 
         public Episode() { }
     }
