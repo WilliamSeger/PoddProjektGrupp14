@@ -93,28 +93,40 @@ namespace PL
 
         private void removeCategoryBtn_Click(object sender, EventArgs e)
         {
-            if(categoriesLv.SelectedItems.Count > 0)
+            if (categoriesLv.SelectedItems.Count > 0)
             {
-                int categoryIndex = categoriesLv.SelectedIndices[0];
-                categoryController.DeleteCategory(categoryIndex);
+                string message = "Vill du ta bort denna kategori?";
+                string title = "Kategori";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons);
 
-                //Uppdaterar combobox och listview
-                categoriesLv.Clear();
-                populateCategoriesLv();
-                podcastCategoryCb.SelectedIndex = -1;
-                ClearAllCombobox();
-                populateAllCombobox();
+                if (result == DialogResult.Yes)
+                {
+                    int categoryIndex = categoriesLv.SelectedIndices[0];
+                    categoryController.DeleteCategory(categoryIndex);
+
+                    //Uppdaterar combobox och listview
+                    categoriesLv.Clear();
+                    populateCategoriesLv();
+                    podcastCategoryCb.SelectedIndex = -1;
+                    ClearAllCombobox();
+                    populateAllCombobox();
+                }
+                else
+                {
+                    return;
+                }
             }
             else
             {
                 MessageBox.Show("Vänligen välj en kategori i listan");
             }
-               
+
         }
 
-        private async void button1_Click(object sender, EventArgs e)
+            private async void button1_Click(object sender, EventArgs e)
         {
-            
+
             string rss = textBox1.Text;
             string name = "";
             if (!validation.isNull(textBox2))
@@ -130,7 +142,7 @@ namespace PL
             {
                 MessageBox.Show("Ogiltig URL, testa igen med en annan!");
             }
-            else if(validation.CheckEmptyTxt(categoryName))
+            else if (validation.CheckEmptyTxt(categoryName))
             {
                 MessageBox.Show("Måste välja en kategori!");
             }
@@ -276,6 +288,11 @@ namespace PL
         private void button3_Click(object sender, EventArgs e)
         {
             populateListView1();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
